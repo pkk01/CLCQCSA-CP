@@ -1,0 +1,5 @@
+class Greeting {
+    String greet(String name) {
+        return "Hello " + name;
+    }
+}
