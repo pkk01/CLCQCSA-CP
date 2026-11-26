@@ -2,7 +2,7 @@
 ## CodeQual — Review 1 API Contract (O1 + O2 endpoints only)
 
 Base URL: `/api`
-Format: JSON over HTTP. FastAPI auto-generates OpenAPI docs at `/docs` —
+Format: JSON over HTTP. FastAPIs auto-generates OpenAPI docs at `/docs` —
 this file is the human-readable source of truth the frontend and backend
 must both match.
 
