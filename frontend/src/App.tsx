@@ -4,6 +4,7 @@ import { AnalyzePage } from "./pages/AnalyzePage";
 import { ReportPage } from "./pages/ReportPage";
 import { ValidationPage } from "./pages/ValidationPage";
 import { HistoryPage } from "./pages/HistoryPage";
+import { SimilarityPage } from "./pages/SimilarityPage";
 import { triggerValidation } from "./api/client";
 import type { AnalysisResponse } from "./api/types";
 
@@ -63,6 +64,8 @@ export function App() {
             onNavigateToAnalyze={() => setCurrentPage("Analyze")}
           />
         )}
+
+        {currentPage === "Similarity" && <SimilarityPage />}
       </main>
 
       <footer className="bg-white border-t border-gray-200 py-4 mt-auto">

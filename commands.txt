@@ -1,0 +1,111 @@
+No flags
+
+def average(numbers):
+    total = 0
+    for number in numbers:
+        total += number
+    return total / len(numbers)
+
+class Greeter {
+    String greet(String name) {
+        if (name == null) {
+            return "Hello, stranger!";
+        }
+        return "Hello, " + name + "!";
+    }
+}
+
+
+
+Updated todo list
+
+### `syntax_error`
+
+Invalid Python:
+
+def calculate(: 
+    return 1
+
+Invalid Java:
+
+class Demo {
+    int calculate( {
+        return 1;
+    }
+}
+
+Result:
+
+```text
+syntax_error
+Score: 0.0
+```
+
+---
+
+### `undefined_variable`
+
+Python:
+
+def calculate(value):
+    return value + missing_value
+
+Java:
+
+class Demo {
+    int calculate(int value) {
+        return value + missingValue;
+    }
+}
+
+Result:
+
+```text
+undefined_variable
+```
+
+---
+
+### `deep_nesting`
+
+def search(items):
+    for first in items:
+        for second in items:
+            for third in items:
+                if first == second:
+                    return third
+    return None
+
+If the nesting depth exceeds the configured threshold:
+
+```text
+deep_nesting
+```
+
+---
+
+### `long_function:<function_name>`
+
+```python
+def generate_report(data):
+    step_one = 1
+    step_two = 2
+    step_three = 3
+    # many more executable lines...
+```
+
+When the function exceeds 40 lines:
+
+```text
+long_function:generate_report
+```
+
+---
+
+A function can have multiple flags:
+
+```text
+undefined_variable
+deep_nesting
+long_function:generate_report
+```

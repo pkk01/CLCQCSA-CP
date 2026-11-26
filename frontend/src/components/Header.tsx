@@ -1,6 +1,6 @@
 import React from "react";
 
-export type PageName = "Analyze" | "Report" | "Validation" | "History";
+export type PageName = "Analyze" | "Report" | "Validation" | "History" | "Similarity";
 
 interface HeaderProps {
   currentPage: PageName;
@@ -13,6 +13,7 @@ export function Header({ currentPage, onNavigate }: HeaderProps) {
     { name: "Report", label: "Report" },
     { name: "Validation", label: "Validation" },
     { name: "History", label: "History" },
+    { name: "Similarity", label: "Similarity" },
   ];
 
   return (

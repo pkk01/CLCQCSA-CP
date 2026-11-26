@@ -4,6 +4,8 @@ import type {
   ApiError,
   HealthResponse,
   RunsListResponse,
+  SimilarityRequest,
+  SimilarityResponse,
   ValidationResponse,
 } from "./types";
 
@@ -69,5 +71,15 @@ export async function fetchValidationRun(runId: number): Promise<ValidationRespo
 
 export async function fetchHealth(): Promise<HealthResponse> {
   const response = await apiClient.get<HealthResponse>("/health");
+  return response.data;
+}
+
+export async function checkSimilarity(
+  request: SimilarityRequest
+): Promise<SimilarityResponse> {
+  const response = await apiClient.post<SimilarityResponse>(
+    "/similarity",
+    request
+  );
   return response.data;
 }

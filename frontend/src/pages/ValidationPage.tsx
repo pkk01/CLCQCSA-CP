@@ -60,8 +60,8 @@ export function ValidationPage({ refreshTrigger }: ValidationPageProps = {}) {
             Validation Harness &amp; Accuracy
           </h1>
           <p className="mt-1 text-sm text-gray-600">
-            Automated test oracle evaluating CodeQual accuracy against labeled ground truth fixtures
-            (PRD.md §3 KPI-1). Synchronized automatically after each analysis.
+            Runs the engine against the pre-labelled fixtures/ dataset and reports accuracy
+            (PRD.md §3 KPI-1). Click "Run Full Validation Harness" to re-evaluate.
           </p>
         </div>
 
@@ -151,7 +151,7 @@ export function ValidationPage({ refreshTrigger }: ValidationPageProps = {}) {
         <div className="space-y-6">
           <div className="flex items-center justify-between text-xs text-gray-500 px-1">
             <span>Synchronized with database: {lastUpdated.toLocaleTimeString()}</span>
-            <span className="text-emerald-700 font-medium">Auto-updated with latest analysis runs</span>
+            <span className="text-emerald-700 font-medium">Results from last harness run</span>
           </div>
 
           {/* Key Metrics Overview Cards */}

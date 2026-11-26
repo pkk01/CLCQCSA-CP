@@ -69,3 +69,21 @@ export interface HealthResponse {
   status: string;
   grammars_loaded: string[];
 }
+
+export interface SimilarityRequest {
+  code_a: string;
+  language_a: "python" | "java";
+  code_b: string;
+  language_b: "python" | "java";
+}
+
+export interface SimilarityResponse {
+  similarity: number;
+  verdict: "plagiarized" | "suspicious" | "not_plagiarized";
+  structural_score: number;
+  shingle_score: number;
+  tokens_a: number;
+  tokens_b: number;
+  matching_ngrams: number;
+  reason: string;
+}

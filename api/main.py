@@ -14,6 +14,7 @@ from api.models import HealthResponse
 from api.routes.analyze import router as analyze_router
 from api.routes.runs import router as runs_router
 from api.routes.validation import router as validation_router
+from api.routes.similarity import router as similarity_router
 
 # Initialize database tables
 Base.metadata.create_all(bind=engine)
@@ -37,6 +38,7 @@ app.add_middleware(
 app.include_router(analyze_router)
 app.include_router(runs_router)
 app.include_router(validation_router)
+app.include_router(similarity_router)
 
 
 @app.get("/api/health", response_model=HealthResponse, tags=["health"])
